@@ -2,9 +2,9 @@
 #      Site Configs      #
 # ---------------------- #
 
-name: Styleguide · eDoctor
+name: Styleguide
 url: http://edoctor.github.io
-permalink: /styleguide/:title.html
+permalink: /styleguide/:title
 paginate: 5
 paginate_path: page/:num
 excerpt_separator: '<!-- more -->'
