@@ -1,8 +1,6 @@
 // Private variables
 $font-size-base:    16px;
 $line-height-base:  1.75;
-$code-colors:       #c7254e #f9f2f4 transparent;
-$pre-colors:        inherit #f5f5f5 #ccc;
 
 // Core Variables and Mixins
 @import 'base/variables', 'base/mixins';
@@ -108,4 +106,38 @@ $pre-colors:        inherit #f5f5f5 #ccc;
   }
 }
 
-@import 'highlight';
+h1 {
+  padding-bottom: 20px;
+  font-size: $font-size-base * 1.8;
+  text-shadow: 1px 1px 3px rgba(#000, 0.2);
+}
+
+article {
+  ol, ul, p, pre, blockquote {
+    margin-bottom: $font-size-base * $line-height-base / 2;
+  }
+
+  ol, ul {
+    margin-left: 25px;
+
+    ol, ul {
+      margin: {
+        top: 0;
+        bottom: 0;
+      }
+    }
+
+    ul {
+      list-style: circle;
+    }
+  }
+
+  ol {
+    list-style: decimal;
+  }
+  ul {
+    list-style: disc;
+  }
+}
+
+@import 'base/codes', 'highlight';

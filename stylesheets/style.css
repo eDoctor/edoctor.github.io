@@ -1,1 +1,432 @@
-*{margin:0;padding:0;-webkit-tap-highlight-color:rgba(0,0,0,0)}html{overflow-y:scroll;-webkit-overflow-scrolling:touch;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{background-color:#fff;color:#333;font:16px/1.75 "Helvetica Neue",Helvetica,Arial,sans-serif}a{color:#428bca;text-decoration:none}a:hover{color:#2a6496;text-decoration:underline}button,input,select,textarea{font:inherit;font-size:100%;vertical-align:baseline}input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#999}input::-moz-placeholder,textarea::-moz-placeholder{color:#999}input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#999}ol,ul{list-style:none}img{border:0}em{font-style:normal}audio,canvas,video{display:inline-block}sub,sup{position:relative;font-size:75%;line-height:0;vertical-align:baseline}sub{bottom:-0.25em}sup{top:-0.5em}table{border-collapse:collapse;border-spacing:0}th{text-align:inherit}.clearfix:before,.clearfix:after{content:' ';display:table}.clearfix:after{clear:both}.float-l{float:left}.float-r{float:right}.hide{display:none !important}.show{display:block !important}.invisible{visibility:hidden}.container{min-width:280px;margin-left:auto;margin-right:auto;padding:20px}.logo{width:179px;height:26px;background-image:url(http://edoctor.cn/assets/edoctor/logo.png);background-repeat:no-repeat}@media only screen and (-webkit-min-min-device-pixel-ratio: 2), only screen and (min--moz-min-device-pixel-ratio: 2), only screen and (-o-min-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){.logo{background-image:url(http://edoctor.cn/assets/edoctor/logo@2x.png);background-size:100% auto}}.dashboard-tabs{margin-top:20px;margin-bottom:30px;background-color:#eaeaea;background-image:-webkit-linear-gradient(#fafafa,#eaeaea);background-image:-moz-linear-gradient(#fafafa,#eaeaea);background-image:-o-linear-gradient(#fafafa,#eaeaea);background-image:linear-gradient(#fafafa,#eaeaea);border:1px solid #eaeaea;border-bottom-color:#cacaca;border-radius:4px;font-weight:bold}.dashboard-tabs li{display:table-cell;width:1%}.dashboard-tabs li:first-child a{border-left:0;border-bottom-left-radius:4px}.dashboard-tabs li:first-child a:hover,.dashboard-tabs li:first-child a.active{border-top-left-radius:4px}.dashboard-tabs li:last-child a{border-right:0;border-bottom-right-radius:4px}.dashboard-tabs li:last-child a:hover,.dashboard-tabs li:last-child a.active{border-top-right-radius:4px}.dashboard-tabs a{display:block;padding:8px 0;border-bottom:2px solid #dadada;border-left:1px solid rgba(255,255,255,0.7);border-right:1px solid rgba(0,0,0,0.04);color:#777;font-size:18px;text-align:center;text-shadow:0 1px #fff}.dashboard-tabs a:hover{background-color:#dce6ef;background-image:-webkit-linear-gradient(#fafbfd,#dce6ef);background-image:-moz-linear-gradient(#fafbfd,#dce6ef);background-image:-o-linear-gradient(#fafbfd,#dce6ef);background-image:linear-gradient(#fafbfd,#dce6ef);border-bottom:2px solid #cfdce8;color:#4183c4}.dashboard-tabs a.active,.dashboard-tabs a.active:hover{background-color:#ebebeb;background-image:-webkit-linear-gradient(#fcfcfc,#ebebeb);background-image:-moz-linear-gradient(#fcfcfc,#ebebeb);background-image:-o-linear-gradient(#fcfcfc,#ebebeb);background-image:linear-gradient(#fcfcfc,#ebebeb);border-bottom:2px solid rgba(92,184,92,0.8);color:#333;text-decoration:none;cursor:default}.styleguide>article{display:none}.styleguide>article:target{display:block}.highlight .k,.highlight .gs,.highlight .kc,.highlight .kd,.highlight .kn,.highlight .kp,.highlight .kr,.highlight .ow{font-weight:bold}.highlight .cp{color:#999;font-weight:bold}.highlight .gu{color:#800080;font-weight:bold}.highlight .kt,.highlight .nc{color:#458;font-weight:bold}.highlight .ne,.highlight .nf{color:#900;font-weight:bold}.highlight .ge{font-style:italic}.highlight .c,.highlight .cm,.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#000;background-color:#fdd}.highlight .gd .x{color:#000;background-color:#faa}.highlight .gi{color:#000;background-color:#dfd}.highlight .gi .x{color:#000;background-color:#afa}.highlight .gc{color:#999;background-color:#eaf2f5}.highlight .go{color:#888}.highlight .n{color:#333}.highlight .w{color:#bbb}.highlight .gr,.highlight .gt{color:#a00}.highlight .gh,.highlight .bp{color:#999}.highlight .gp,.highlight .nn{color:#555}.highlight .m,.highlight .mf,.highlight .mh,.highlight .mi,.highlight .mo,.highlight .il{color:#099}.highlight .s,.highlight .sb,.highlight .sc,.highlight .sd,.highlight .s2,.highlight .se,.highlight .sh,.highlight .si,.highlight .sx,.highlight .s1{color:#d14}.highlight .na,.highlight .no,.highlight .nv,.highlight .vc,.highlight .vg,.highlight .vi{color:#008080}.highlight .ni{color:#800080}.highlight .nb{color:#0086b3}.highlight .nt{color:#000080}.highlight .sr{color:#009926}.highlight .ss{color:#990073}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/base\/_reset\.scss}line{font-family:\000031}}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/base\/_reset\.scss}line{font-family:\0000314}}
+html {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/base\/_reset\.scss}line{font-family:\0000325}}
+body {
+  background-color: white;
+  color: #333333;
+  font: 16px/1.75 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/base\/_reset\.scss}line{font-family:\0000331}}
+a {
+  color: #428bca;
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/base\/_reset\.scss}line{font-family:\0000335}}
+a:hover {
+  color: #2a6496;
+  text-decoration: underline;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/base\/_reset\.scss}line{font-family:\0000346}}
+button, input, select, textarea {
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/\.rvm\/gems\/ruby-1\.9\.3-p392\@jekyll\/bundler\/gems\/compass-34159da9a92c\/frameworks\/compass\/stylesheets\/compass\/css3\/_user-interface\.scss}line{font-family:\0000351}}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #999999;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/\.rvm\/gems\/ruby-1\.9\.3-p392\@jekyll\/bundler\/gems\/compass-34159da9a92c\/frameworks\/compass\/stylesheets\/compass\/css3\/_user-interface\.scss}line{font-family:\0000353}}
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #999999;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/\.rvm\/gems\/ruby-1\.9\.3-p392\@jekyll\/bundler\/gems\/compass-34159da9a92c\/frameworks\/compass\/stylesheets\/compass\/css3\/_user-interface\.scss}line{font-family:\0000354}}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #999999;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/base\/_reset\.scss}line{font-family:\0000360}}
+ol, ul {
+  list-style: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/base\/_reset\.scss}line{font-family:\0000364}}
+img {
+  border: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/base\/_reset\.scss}line{font-family:\0000368}}
+em {
+  font-style: normal;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/base\/_reset\.scss}line{font-family:\0000372}}
+audio, canvas, video {
+  display: inline-block;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/base\/_reset\.scss}line{font-family:\0000376}}
+sub, sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/base\/_reset\.scss}line{font-family:\0000382}}
+sub {
+  bottom: -0.25em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/base\/_reset\.scss}line{font-family:\0000385}}
+sup {
+  top: -0.5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/base\/_reset\.scss}line{font-family:\0000389}}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/base\/_reset\.scss}line{font-family:\0000392}}
+th {
+  text-align: inherit;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/base\/_placeholders\.scss}line{font-family:\000033}}
+.clearfix:before, .clearfix:after {
+  content: ' ';
+  display: table;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/base\/_placeholders\.scss}line{font-family:\000038}}
+.clearfix:after {
+  clear: both;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/base\/_utilities\.scss}line{font-family:\000035}}
+.float-l {
+  float: left;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/base\/_utilities\.scss}line{font-family:\000038}}
+.float-r {
+  float: right;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/base\/_utilities\.scss}line{font-family:\0000313}}
+.hide {
+  display: none !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/base\/_utilities\.scss}line{font-family:\0000316}}
+.show {
+  display: block !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/base\/_utilities\.scss}line{font-family:\0000319}}
+.invisible {
+  visibility: hidden;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/style\.scss}line{font-family:\0000317}}
+.container {
+  min-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/style\.scss}line{font-family:\0000326}}
+.logo {
+  width: 179px;
+  height: 26px;
+  background-image: url(http://edoctor.cn/assets/edoctor/logo.png);
+  background-repeat: no-repeat;
+}
+@media only screen and (-webkit-min-min-device-pixel-ratio: 2), only screen and (min--moz-min-device-pixel-ratio: 2), only screen and (-o-min-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/style\.scss}line{font-family:\0000326}}
+  .logo {
+    background-image: url(http://edoctor.cn/assets/edoctor/logo@2x.png);
+    background-size: 100% auto;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/style\.scss}line{font-family:\0000333}}
+.dashboard-tabs {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  background-color: #eaeaea;
+  background-image: -webkit-linear-gradient(#fafafa, #eaeaea);
+  background-image: -moz-linear-gradient(#fafafa, #eaeaea);
+  background-image: -o-linear-gradient(#fafafa, #eaeaea);
+  background-image: linear-gradient(#fafafa, #eaeaea);
+  border: 1px solid #eaeaea;
+  border-bottom-color: #cacaca;
+  border-radius: 4px;
+  font-weight: bold;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/style\.scss}line{font-family:\0000345}}
+.dashboard-tabs li {
+  display: table-cell;
+  width: 1%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/style\.scss}line{font-family:\0000349}}
+.dashboard-tabs li:first-child a {
+  border-left: 0;
+  border-bottom-left-radius: 4px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/style\.scss}line{font-family:\0000353}}
+.dashboard-tabs li:first-child a:hover, .dashboard-tabs li:first-child a.active {
+  border-top-left-radius: 4px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/style\.scss}line{font-family:\0000358}}
+.dashboard-tabs li:last-child a {
+  border-right: 0;
+  border-bottom-right-radius: 4px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/style\.scss}line{font-family:\0000362}}
+.dashboard-tabs li:last-child a:hover, .dashboard-tabs li:last-child a.active {
+  border-top-right-radius: 4px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/style\.scss}line{font-family:\0000368}}
+.dashboard-tabs a {
+  display: block;
+  padding: 8px 0;
+  border-bottom: 2px solid #dadada;
+  border-left: 1px solid rgba(255, 255, 255, 0.7);
+  border-right: 1px solid rgba(0, 0, 0, 0.04);
+  color: #777;
+  font-size: 18px;
+  text-align: center;
+  text-shadow: 0 1px #fff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/style\.scss}line{font-family:\0000381}}
+.dashboard-tabs a:hover {
+  background-color: #dce6ef;
+  background-image: -webkit-linear-gradient(#fafbfd, #dce6ef);
+  background-image: -moz-linear-gradient(#fafbfd, #dce6ef);
+  background-image: -o-linear-gradient(#fafbfd, #dce6ef);
+  background-image: linear-gradient(#fafbfd, #dce6ef);
+  border-bottom: 2px solid #cfdce8;
+  color: #4183c4;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/style\.scss}line{font-family:\0000388}}
+.dashboard-tabs a.active, .dashboard-tabs a.active:hover {
+  background-color: #ebebeb;
+  background-image: -webkit-linear-gradient(#fcfcfc, #ebebeb);
+  background-image: -moz-linear-gradient(#fcfcfc, #ebebeb);
+  background-image: -o-linear-gradient(#fcfcfc, #ebebeb);
+  background-image: linear-gradient(#fcfcfc, #ebebeb);
+  border-bottom: 2px solid rgba(92, 184, 92, 0.8);
+  color: #333333;
+  text-decoration: none;
+  cursor: default;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/style\.scss}line{font-family:\00003100}}
+.styleguide > article {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/style\.scss}line{font-family:\00003103}}
+.styleguide > article:target {
+  display: block;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/style\.scss}line{font-family:\00003109}}
+h1 {
+  padding-bottom: 20px;
+  font-size: 28.8px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/style\.scss}line{font-family:\00003116}}
+article ol, article ul, article p, article pre, article blockquote {
+  margin-bottom: 14px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/style\.scss}line{font-family:\00003120}}
+article ol, article ul {
+  margin-left: 25px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/style\.scss}line{font-family:\00003123}}
+article ol ol, article ol ul, article ul ol, article ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/style\.scss}line{font-family:\00003130}}
+article ol ul, article ul ul {
+  list-style: circle;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/style\.scss}line{font-family:\00003135}}
+article ol {
+  list-style: decimal;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/style\.scss}line{font-family:\00003138}}
+article ul {
+  list-style: disc;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/base\/_codes\.scss}line{font-family:\000036}}
+code, pre {
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/base\/_codes\.scss}line{font-family:\0000310}}
+code {
+  margin: 0 3px;
+  padding: 2px 4px;
+  background-color: #f9f2f4;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #c7254e;
+  font-size: 90%;
+  white-space: nowrap;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/base\/_codes\.scss}line{font-family:\0000321}}
+pre {
+  padding: 6px 10px;
+  overflow: auto;
+  background-color: whitesmoke;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  color: inherit;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/base\/_codes\.scss}line{font-family:\0000334}}
+pre code {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  color: inherit;
+  font-size: inherit;
+  white-space: pre-wrap;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/_highlight\.scss}line{font-family:\000033}}
+.highlight .k, .highlight .gs, .highlight .kc, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .ow {
+  font-weight: bold;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/_highlight\.scss}line{font-family:\000036}}
+.highlight .cp {
+  color: #999;
+  font-weight: bold;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/_highlight\.scss}line{font-family:\0000310}}
+.highlight .gu {
+  color: #800080;
+  font-weight: bold;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/_highlight\.scss}line{font-family:\0000314}}
+.highlight .kt, .highlight .nc {
+  color: #458;
+  font-weight: bold;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/_highlight\.scss}line{font-family:\0000318}}
+.highlight .ne, .highlight .nf {
+  color: #900;
+  font-weight: bold;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/_highlight\.scss}line{font-family:\0000322}}
+.highlight .ge {
+  font-style: italic;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/_highlight\.scss}line{font-family:\0000325}}
+.highlight .c, .highlight .cm, .highlight .c1 {
+  color: #998;
+  font-style: italic;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/_highlight\.scss}line{font-family:\0000329}}
+.highlight .cs {
+  color: #999;
+  font-weight: bold;
+  font-style: italic;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/_highlight\.scss}line{font-family:\0000334}}
+.highlight .gd {
+  color: #000;
+  background-color: #fdd;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/_highlight\.scss}line{font-family:\0000338}}
+.highlight .gd .x {
+  color: #000;
+  background-color: #faa;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/_highlight\.scss}line{font-family:\0000342}}
+.highlight .gi {
+  color: #000;
+  background-color: #dfd;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/_highlight\.scss}line{font-family:\0000346}}
+.highlight .gi .x {
+  color: #000;
+  background-color: #afa;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/_highlight\.scss}line{font-family:\0000350}}
+.highlight .gc {
+  color: #999;
+  background-color: #eaf2f5;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/_highlight\.scss}line{font-family:\0000354}}
+.highlight .go {
+  color: #888;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/_highlight\.scss}line{font-family:\0000357}}
+.highlight .n {
+  color: #333;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/_highlight\.scss}line{font-family:\0000360}}
+.highlight .w {
+  color: #bbb;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/_highlight\.scss}line{font-family:\0000363}}
+.highlight .gr, .highlight .gt {
+  color: #a00;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/_highlight\.scss}line{font-family:\0000366}}
+.highlight .gh, .highlight .bp {
+  color: #999;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/_highlight\.scss}line{font-family:\0000369}}
+.highlight .gp, .highlight .nn {
+  color: #555;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/_highlight\.scss}line{font-family:\0000372}}
+.highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .mo, .highlight .il {
+  color: #099;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/_highlight\.scss}line{font-family:\0000375}}
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highlight .s1 {
+  color: #d14;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/_highlight\.scss}line{font-family:\0000378}}
+.highlight .na, .highlight .no, .highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi {
+  color: #008080;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/_highlight\.scss}line{font-family:\0000381}}
+.highlight .ni {
+  color: #800080;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/_highlight\.scss}line{font-family:\0000384}}
+.highlight .nb {
+  color: #0086b3;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/_highlight\.scss}line{font-family:\0000387}}
+.highlight .nt {
+  color: #000080;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/_highlight\.scss}line{font-family:\0000390}}
+.highlight .sr {
+  color: #009926;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/i\/github\/edoctor\.github\.io\/_sass\/_highlight\.scss}line{font-family:\0000393}}
+.highlight .ss {
+  color: #990073;
+}
