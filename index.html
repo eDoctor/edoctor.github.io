@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Overview
+title: Styleguide
 ---
 
 <div class="logo"></div>
@@ -8,19 +8,23 @@ title: Overview
 <nav class="dashboard-tabs" id="j-nav">
   <ul>
     {% for post in site.posts reversed %}
-    <li><a href="#{{ post.id }}">{{ post.title }}</a></li>
+    <li><a href="#{{ post.id }}">{{ post.title | split: ' ' | first }}</a></li>
     {% endfor %}
   </ul>
 </nav>
 
 <section class="styleguide">
   {% for post in site.posts reversed %}
-  <article id="{{ post.id }}">{{ post.content }}</article>
+  <article id="{{ post.id }}">
+    <h1>{{ post.title }}</h1>
+    {{ post.content }}
+  </article>
   {% endfor %}
 </section>
 
 <script>
 var navs = document.getElementById('j-nav').getElementsByTagName('a')
+var titles = document.getElementsByTagName('h1')
 var target = location.hash.slice(1)
 
 if (target.length) {
@@ -36,7 +40,13 @@ window.addEventListener('hashchange', function() {
 
 function setActiveNav(target) {
   for (var i = 0; i < navs.length; i++) {
-    navs[i].className = getTargetName(i) === target ? 'active' : ''
+    if (getTargetName(i) === target) {
+      navs[i].className = 'active'
+      document.title = titles[i].innerHTML
+    }
+    else {
+      navs[i].className = ''
+    }
   }
 }
 

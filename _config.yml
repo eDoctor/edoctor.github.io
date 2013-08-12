@@ -2,12 +2,7 @@
 #      Site Configs      #
 # ---------------------- #
 
-name: Styleguide
-url: http://edoctor.github.io
 permalink: /styleguide/:title
-paginate: 5
-paginate_path: page/:num
-excerpt_separator: '<!-- more -->'
 
 
 # ---------------------- #
@@ -44,11 +39,5 @@ deploy:
 #    Social Networks     #
 # ---------------------- #
 
-# weibo:
-#   username:
-#   uid:
-#   appkey:
-
 # duoshuo:
-
 # google_analytics:
