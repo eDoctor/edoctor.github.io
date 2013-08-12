@@ -23,7 +23,7 @@ timezone: Asia/Shanghai
 sass:
   sass_dir: _sass
   debug_info: true
-  # output_style: compressed
+  output_style: compressed
 
 
 # ---------------------- #
