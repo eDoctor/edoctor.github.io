@@ -167,3 +167,9 @@ blockquote {
   background-color: nth(nth($flash-colors, 3), 2);
   border-color: nth(nth($flash-colors, 3), 3);
 }
+
+.copyright {
+  padding-top: 20px;
+  text-align: center;
+  color: #666;
+}
