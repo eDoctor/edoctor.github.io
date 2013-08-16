@@ -29,6 +29,10 @@ title: Javascript Styleguide
   }
   ```
 
+- 合理使用注释，写注释是为了「__提高代码的可读性，从而提高代码的可维护性__」，不要懒，也不要滥。Refer to [注释规范](https://github.com/aralejs/aralejs.org/wiki/JavaScript-注释规范)
+
+- 利用（1~2个）空行分隔代码块，提高代码可读性与美感，同时照顾其他 review 你代码的同事的心情。
+
 - 对于单 var 模式和多 var 模式，不做强行约定，但同一个文件里，风格必须一致。
 
   推荐有赋值的分开写，没赋值的写一块：
@@ -124,4 +128,56 @@ title: Javascript Styleguide
   ```js
   $('body').find('.foo').text('foo')
   $('body').find('.bar').text('bar')
+  ```
+
+- 优先使用 jQuery 最快的 ID 选择器。
+
+  可以配合给 HTML 标签加上`js-`前缀的 id，提高 DOM 操作效率。此类 id 只用于 js，不应该出现在 css 文件中。
+
+  <p class="good">Good:</p>
+
+  ```js
+  $('#js-based-id').find('.class')
+  ```
+
+  <p class="bad">Bad:</p>
+
+  ```js
+  $('#js-based-id .class')
+  ```
+
+- 事件绑定一律使用`.on()`。
+
+  <p class="good">Good:</p>
+
+  ```js
+  $('#js-based-id').on('click', function(e) {
+      e.preventDefault()
+  })
+  ```
+
+  <p class="bad">Bad:</p>
+
+  ```js
+  $('#js-based-id').bind('click', function(e) {
+      e.preventDefault()
+  })
+
+  $('#js-based-id').click(function(e) {
+      e.preventDefault()
+  })
+  ```
+
+- 同时给同一类 DOM 元素绑定事件时，利用冒泡机制，将事件绑定在公共父元素上。
+
+  <p class="good">Good:</p>
+
+  ```js
+  $('ul').on('click', 'li', function() {})
+  ```
+
+  <p class="bad">Bad:</p>
+
+  ```js
+  $('ul > li').on('click', function() {})
   ```
