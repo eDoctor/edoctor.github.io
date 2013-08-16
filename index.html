@@ -15,7 +15,7 @@ title: Styleguide
 
 <section class="styleguide">
   {% for post in site.posts reversed %}
-  <article id="{{ post.id }}">
+  <article>
     <h1>{{ post.title }}</h1>
     {{ post.content }}
   </article>
@@ -25,6 +25,7 @@ title: Styleguide
 <script>
 var navs = document.getElementById('j-nav').getElementsByTagName('a')
 var titles = document.getElementsByTagName('h1')
+var articles = document.getElementsByTagName('article')
 var target = location.hash.slice(1)
 
 if (target.length) {
@@ -42,10 +43,12 @@ function setActiveNav(target) {
   for (var i = 0; i < navs.length; i++) {
     if (getTargetName(i) === target) {
       navs[i].className = 'active'
+      articles[i].style.display = 'block'
       document.title = titles[i].innerHTML
     }
     else {
       navs[i].className = ''
+      articles[i].style.display = 'none'
     }
   }
 }
