@@ -1,6 +1,13 @@
 // Private variables
-$font-size-base:    16px;
-$line-height-base:  1.75;
+$font-size-base: 16px;
+$line-height-base: 1.75;
+// Flash messages. (Order: text, background, border)
+$flash-states: success warning danger info !default;
+$flash-colors: #468847 #dff0d8 darken(adjust-hue(#dff0d8, -10), 5%),
+               #c09853 #fcf8e3 darken(adjust-hue(#fcf8e3, -10), 3%),
+               #b94a48 #f2dede darken(adjust-hue(#f2dede, -10), 3%),
+               #3a87ad #d9edf7 darken(adjust-hue(#d9edf7, -10), 7%) !default;
+// $pre-colors: inherit nth(nth($flash-colors, 4), 2) nth(nth($flash-colors, 4), 3);
 
 // Core Variables and Mixins
 @import 'base/variables', 'base/mixins';
@@ -14,8 +21,11 @@ $line-height-base:  1.75;
 // Utility classes
 @import 'base/placeholders', 'base/utilities';
 
+@import 'base/codes', 'highlight';
+
 .container {
   min-width: 280px;
+  max-width: 984px;
   margin: {
     left: auto;
     right: auto;
@@ -33,7 +43,7 @@ $line-height-base:  1.75;
 .dashboard-tabs {
   margin: {
     top: 20px;
-    bottom: 30px;
+    bottom: 15px;
   }
   background-color: #eaeaea;
   @include background-image(linear-gradient(#fafafa, #eaeaea));
@@ -99,10 +109,6 @@ $line-height-base:  1.75;
 .styleguide {
   > article {
     display: none;
-
-    &:target {
-      display: block;
-    }
   }
 }
 
@@ -110,10 +116,16 @@ h1 {
   padding-bottom: 20px;
   font-size: $font-size-base * 1.8;
   text-shadow: 1px 1px 3px rgba(#000, 0.2);
+
+  &::after {
+    margin-left: 10px;
+    content: '\0262D';
+    font-size: $font-size-base * 2.3;
+  }
 }
 
 article {
-  ol, ul, p, pre, blockquote {
+  h2, ol, ul, p, pre, blockquote {
     margin-bottom: $font-size-base * $line-height-base / 2;
   }
 
@@ -140,4 +152,18 @@ article {
   }
 }
 
-@import 'base/codes', 'highlight';
+blockquote {
+  padding: 0 15px;
+  border-left: 4px solid #ddd;
+  color: #777;
+}
+
+.good + .highlight > pre {
+  background-color: nth(nth($flash-colors, 1), 2);
+  border-color: nth(nth($flash-colors, 1), 3);
+}
+
+.bad + .highlight > pre {
+  background-color: nth(nth($flash-colors, 3), 2);
+  border-color: nth(nth($flash-colors, 3), 3);
+}
