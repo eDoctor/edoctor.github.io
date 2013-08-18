@@ -7,7 +7,6 @@ $flash-colors: #468847 #dff0d8 darken(adjust-hue(#dff0d8, -10), 5%),
                #c09853 #fcf8e3 darken(adjust-hue(#fcf8e3, -10), 3%),
                #b94a48 #f2dede darken(adjust-hue(#f2dede, -10), 3%),
                #3a87ad #d9edf7 darken(adjust-hue(#d9edf7, -10), 7%) !default;
-// $pre-colors: inherit nth(nth($flash-colors, 4), 2) nth(nth($flash-colors, 4), 3);
 
 // Core Variables and Mixins
 @import 'base/variables', 'base/mixins';
@@ -20,8 +19,6 @@ $flash-colors: #468847 #dff0d8 darken(adjust-hue(#dff0d8, -10), 5%),
 
 // Utility classes
 @import 'base/placeholders', 'base/utilities';
-
-@import 'base/codes', 'highlight';
 
 .container {
   min-width: 280px;
@@ -152,6 +149,14 @@ article {
   }
 }
 
+.copyright {
+  padding-top: 20px;
+  text-align: center;
+  color: #666;
+}
+
+@import 'base/codes', 'highlight';
+
 blockquote {
   padding: 0 15px;
   border-left: 4px solid #ddd;
@@ -166,10 +171,4 @@ blockquote {
 .bad + .highlight > pre {
   background-color: nth(nth($flash-colors, 3), 2);
   border-color: nth(nth($flash-colors, 3), 3);
-}
-
-.copyright {
-  padding-top: 20px;
-  text-align: center;
-  color: #666;
 }
