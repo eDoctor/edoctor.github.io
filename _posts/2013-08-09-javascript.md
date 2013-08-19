@@ -22,7 +22,7 @@ title: Javascript Styleguide
 
 - 缩进使用 2 个空格，禁用 tab。
 
-  [Sublime Text](http://www.sublimetext.com/3) 可以设置：
+  [Sublime Text](http://mrzhang.me/blog/after-reinstall-the-system.html#sm) 可以设置：
 
   ```js
   {
@@ -37,7 +37,7 @@ title: Javascript Styleguide
 
 - 行末、空行不要有空格。
 
-  [Sublime Text](http://www.sublimetext.com/3) 可以设置：
+  [Sublime Text](http://mrzhang.me/blog/after-reinstall-the-system.html#sm) 可以设置：
 
   ```js
   {
