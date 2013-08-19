@@ -4,7 +4,7 @@ date: 2013-08-09 10:45:35 +0800
 title: Javascript Styleguide
 ---
 
->  Push 至 Git 库前，必须先通过 [JSHint](http://jshint.com/install/) 检查！
+>  Push 至 Git 库前，必须先通过 [JSHint](http://jshint.com/install/) ([.jshintrc](https://gist.github.com/jsw0528/6228278)) 检查！
 
 ## 命名规范
 
@@ -29,9 +29,22 @@ title: Javascript Styleguide
   }
   ```
 
-- 合理使用注释，写注释是为了「__提高代码的可读性，从而提高代码的可维护性__」，不要懒，也不要滥。Refer to [注释规范](https://github.com/aralejs/aralejs.org/wiki/JavaScript-注释规范)
+- 尽量不要让每行超过 120 个字符，在不影响阅读的前提下，适当换行。
 
-- 利用（1~2个）空行分隔代码块，提高代码可读性与美感，同时照顾其他 review 你代码的同事的心情。
+- 利用（1~2个）空行分隔逻辑上相对独立的代码块，提高代码可读性与美感，同时照顾其他 review 你代码的同事的心情。
+
+- 行末、空行不要有空格。
+
+  Sublime Text 可以设置：
+
+  ```js
+  {
+      "ensure_newline_at_eof_on_save": true,
+      "trim_trailing_white_space_on_save": true
+  }
+  ```
+
+- 合理使用注释，写注释是为了「__提高代码的可读性，从而提高代码的可维护性__」，不要懒，也不要滥。Refer to [注释规范](https://github.com/aralejs/aralejs.org/wiki/JavaScript-注释规范)
 
 - 对于单 var 模式和多 var 模式，不做强行约定，但同一个文件里，风格必须一致。
 
@@ -43,7 +56,47 @@ title: Javascript Styleguide
   var baz, len, i
   ```
 
-- 不允许一行判断。
+- 对于分号问题，也不做强行约定，但同一个文件里，风格必须一致。
+
+- 尽量减少全局变量的使用。
+
+  如果需要从 HTML 页面传入多个变量，给它们指派合适的命名空间：
+
+  <p class="good">Good:</p>
+
+  ```
+  javascript:
+      var user = {
+        name: 'Steve Jobs',
+        age: 56
+      }
+  ```
+
+  <p class="bad">Bad:</p>
+
+  ```
+  javascript:
+      var userName = 'Steve Jobs'
+      var userAge = 56
+  ```
+
+- 使用 Array/Object 直接量，避免使用 Array/Object 构造器。
+
+  <p class="good">Good:</p>
+
+  ```js
+  var arr = []
+  var obj = {}
+  ```
+
+  <p class="bad">Bad:</p>
+
+  ```js
+  var arr = new Array()
+  var obj = new Object()
+  ```
+
+- 语句块必须使用大括号`{}`。
 
   <p class="good">Good:</p>
 
@@ -57,6 +110,33 @@ title: Javascript Styleguide
 
   ```
   if (true) return;
+  ```
+
+- 大括号不换行，并与前面的小括号之间空一格。
+
+  <p class="good">Good:</p>
+
+  ```
+  if (true) {
+      return
+  }
+
+  function name(options) {
+      options || (options = {})
+  }
+  ```
+
+  <p class="bad">Bad:</p>
+
+  ```
+  if (true)
+  {
+      return
+  }
+
+  if(true){
+      return
+  }
   ```
 
 - 操作符之间需要有 1 个空格。
