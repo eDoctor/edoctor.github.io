@@ -18,6 +18,8 @@ title: Javascript Styleguide
 
 ## 编码规范
 
+- 使用`UTF-8`作为文件编码格式。
+
 - 缩进使用 2 个空格，禁用 tab。
 
   Sublime Text 可以设置：
