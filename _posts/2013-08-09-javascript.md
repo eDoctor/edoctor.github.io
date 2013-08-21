@@ -266,7 +266,7 @@ title: Javascript Styleguide
   $('ul').on('click', 'li', function() {})
   ```
 
-- 避免频繁操作 DOM。
+- 避免频繁操作 DOM，减少重绘「Repaint」与重排「Reflow」。
 
   <p class="bad">Bad:</p>
 
