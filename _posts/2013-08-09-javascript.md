@@ -64,6 +64,14 @@ title: Javascript Styleguide
 
   如果需要从 HTML 页面传入多个变量，给它们指派合适的命名空间：
 
+  <p class="bad">Bad:</p>
+
+  ```
+  javascript:
+      var userName = 'Steve Jobs'
+      var userAge = 56
+  ```
+
   <p class="good">Good:</p>
 
   ```
@@ -76,22 +84,7 @@ title: Javascript Styleguide
 
   > 然后将上面的`user`写进「edr-assets」对应项目目录内的`.jshintrc`中。
 
-  <p class="bad">Bad:</p>
-
-  ```
-  javascript:
-      var userName = 'Steve Jobs'
-      var userAge = 56
-  ```
-
 - 使用 Array/Object 直接量，避免使用 Array/Object 构造器。
-
-  <p class="good">Good:</p>
-
-  ```js
-  var arr = []
-  var obj = {}
-  ```
 
   <p class="bad">Bad:</p>
 
@@ -100,15 +93,14 @@ title: Javascript Styleguide
   var obj = new Object()
   ```
 
-- 语句块必须使用大括号`{}`。
-
   <p class="good">Good:</p>
 
+  ```js
+  var arr = []
+  var obj = {}
   ```
-  if (true) {
-      return
-  }
-  ```
+
+- 语句块必须使用大括号`{}`。
 
   <p class="bad">Bad:</p>
 
@@ -116,19 +108,15 @@ title: Javascript Styleguide
   if (true) return;
   ```
 
-- 大括号不换行，并与前面的小括号之间空一格。
-
   <p class="good">Good:</p>
 
   ```
   if (true) {
       return
   }
-
-  function name(options) {
-      options || (options = {})
-  }
   ```
+
+- 大括号不换行，并与前面的小括号之间空一格。
 
   <p class="bad">Bad:</p>
 
@@ -143,13 +131,19 @@ title: Javascript Styleguide
   }
   ```
 
-- 操作符之间需要有 1 个空格。
-
   <p class="good">Good:</p>
 
-  ```js
-  var x = y + z
   ```
+  if (true) {
+      return
+  }
+
+  function name(options) {
+      options || (options = {})
+  }
+  ```
+
+- 操作符之间需要有 1 个空格。
 
   <p class="bad">Bad:</p>
 
@@ -157,16 +151,13 @@ title: Javascript Styleguide
   var x=y+z
   ```
 
-- 不要为了对齐冒号，而增加多余空格。
-
   <p class="good">Good:</p>
 
   ```js
-  {
-      foo: 'foo',
-      barbar: 'barbar'
-  }
+  var x = y + z
   ```
+
+- 不要为了对齐冒号，而增加多余空格。
 
   <p class="bad">Bad:</p>
 
@@ -177,8 +168,6 @@ title: Javascript Styleguide
   }
   ```
 
-- 在行末使用逗号，而非行首。
-
   <p class="good">Good:</p>
 
   ```js
@@ -187,6 +176,8 @@ title: Javascript Styleguide
       barbar: 'barbar'
   }
   ```
+
+- 在行末使用逗号，而非行首。
 
   <p class="bad">Bad:</p>
 
@@ -197,7 +188,23 @@ title: Javascript Styleguide
   }
   ```
 
+  <p class="good">Good:</p>
+
+  ```js
+  {
+      foo: 'foo',
+      barbar: 'barbar'
+  }
+  ```
+
 - 缓存 jQuery 对象，能复用的绝不新建。
+
+  <p class="bad">Bad:</p>
+
+  ```js
+  $('body').find('.foo').text('foo')
+  $('body').find('.bar').text('bar')
+  ```
 
   <p class="good">Good:</p>
 
@@ -207,22 +214,9 @@ title: Javascript Styleguide
   body.find('.bar').text('bar')
   ```
 
-  <p class="bad">Bad:</p>
-
-  ```js
-  $('body').find('.foo').text('foo')
-  $('body').find('.bar').text('bar')
-  ```
-
 - 优先使用 jQuery 最快的 ID 选择器。
 
   > 可以配合给 HTML 标签加上`js-`前缀的 id，提高 DOM 操作效率。此类 id 只用于 js，不应该出现在 css 文件中。
-
-  <p class="good">Good:</p>
-
-  ```js
-  $('#js-based-id').find('.class')
-  ```
 
   <p class="bad">Bad:</p>
 
@@ -230,15 +224,13 @@ title: Javascript Styleguide
   $('#js-based-id .class')
   ```
 
-- 事件绑定一律使用`.on()`。
-
   <p class="good">Good:</p>
 
   ```js
-  $('#js-based-id').on('click', function(e) {
-      e.preventDefault()
-  })
+  $('#js-based-id').find('.class')
   ```
+
+- 事件绑定一律使用`.on()`。
 
   <p class="bad">Bad:</p>
 
@@ -252,13 +244,15 @@ title: Javascript Styleguide
   })
   ```
 
-- 同时给同一类 DOM 元素绑定事件时，利用冒泡机制，将事件绑定在公共父元素上。
-
   <p class="good">Good:</p>
 
   ```js
-  $('ul').on('click', 'li', function() {})
+  $('#js-based-id').on('click', function(e) {
+      e.preventDefault()
+  })
   ```
+
+- 同时给同一类 DOM 元素绑定事件时，利用冒泡机制，将事件绑定在公共父元素上。
 
   <p class="bad">Bad:</p>
 
@@ -266,7 +260,22 @@ title: Javascript Styleguide
   $('ul > li').on('click', function() {})
   ```
 
+  <p class="good">Good:</p>
+
+  ```js
+  $('ul').on('click', 'li', function() {})
+  ```
+
 - 避免频繁操作 DOM。
+
+  <p class="bad">Bad:</p>
+
+  ```js
+  var ul = $('ul')
+  for (var i = 0; i < 100; i++) {
+      ul.append('<li>...</li>')
+  }
+  ```
 
   <p class="good">Good:</p>
 
@@ -288,12 +297,3 @@ title: Javascript Styleguide
   $('ul').html(fragment)
   fragment = li = null
   ```
-
-  <p class="bad">Bad:</p>
-
-  ```js
-  var ul = $('ul')
-  for (var i = 0; i < 100; i++) {
-      ul.append('<li>...</li>')
-  }
-```
