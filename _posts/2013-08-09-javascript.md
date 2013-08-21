@@ -74,6 +74,8 @@ title: Javascript Styleguide
       }
   ```
 
+  > 然后将上面的`user`写进「edr-assets」对应项目目录内的`.jshintrc`中。
+
   <p class="bad">Bad:</p>
 
   ```
@@ -81,8 +83,6 @@ title: Javascript Styleguide
       var userName = 'Steve Jobs'
       var userAge = 56
   ```
-
-  > 然后将上面的`user`写进「edr-assets」对应项目目录的`.jshintrc`中。
 
 - 使用 Array/Object 直接量，避免使用 Array/Object 构造器。
 
