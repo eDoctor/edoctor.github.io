@@ -33,15 +33,13 @@ $flash-colors: #468847 #dff0d8 darken(adjust-hue(#dff0d8, -10), 5%),
 .logo {
   width: 179px;
   height: 26px;
+  margin-bottom: 20px;
   @include img-retina('http://edoctor.cn/assets/edoctor/logo.png', 'http://edoctor.cn/assets/edoctor/logo@2x.png');
   background-repeat: no-repeat;
 }
 
 .dashboard-tabs {
-  margin: {
-    top: 20px;
-    bottom: 15px;
-  }
+  margin-bottom: 15px;
   background-color: #eaeaea;
   @include background-image(linear-gradient(#fafafa, #eaeaea));
   border: 1px solid #eaeaea;
@@ -107,31 +105,12 @@ $flash-colors: #468847 #dff0d8 darken(adjust-hue(#dff0d8, -10), 5%),
   > article {
     display: none;
   }
-}
-
-a:hover > code {
-  color: inherit;
-}
-
-h1 {
-  padding-bottom: 20px;
-  font-size: $font-size-base * 1.8;
-  text-shadow: 1px 1px 3px rgba(#000, 0.2);
-
-  &::after {
-    margin-left: 10px;
-    content: '\0262D';
-    font-size: $font-size-base * 2.3;
-  }
-}
-
-article {
-  h2, ol, ul, p, pre, blockquote {
-    margin-bottom: $font-size-base * $line-height-base / 2;
-  }
 
   ol, ul {
-    margin-left: 25px;
+    margin: {
+      left: 25px;
+      bottom: $font-size-base * $line-height-base / 2;
+    }
 
     ol, ul {
       margin: {
@@ -153,16 +132,37 @@ article {
   }
 }
 
-.copyright {
-  padding-top: 20px;
-  text-align: center;
-  color: #666;
+h1 {
+  padding-bottom: 20px;
+  font-size: $font-size-base * 1.8;
+  text-shadow: 1px 1px 3px rgba(#000, 0.2);
+
+  &::after {
+    margin-left: 10px;
+    content: '\0262D';
+    font-size: $font-size-base * 2.3;
+  }
+}
+
+h2, p, pre, blockquote {
+  margin-bottom: $font-size-base * $line-height-base / 2;
+}
+
+p > img {
+  width: 100%;
+  max-width: 898px;
 }
 
 blockquote {
   padding: 0 15px;
   border-left: 4px solid #ddd;
   color: #777;
+}
+
+.copyright {
+  padding-top: 20px;
+  text-align: center;
+  color: #666;
 }
 
 .good {
