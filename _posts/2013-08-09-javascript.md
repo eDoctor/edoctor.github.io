@@ -265,3 +265,35 @@ title: Javascript Styleguide
   ```js
   $('ul > li').on('click', function() {})
   ```
+
+- 避免频繁操作 DOM。
+
+  <p class="good">Good:</p>
+
+  ```js
+  // 方法一
+  var html = ''
+  for (var i = 0; i < 100; i++) {
+      html += '<li>...</li>'
+  }
+  $('ul').html(html)
+
+  // 方法二
+  var fragment = document.createDocumentFragment()
+  var li
+  for (var i = 0; i < 100; i++) {
+      li = document.createElement('li')
+      fragment.appendChild(li)
+  }
+  $('ul').html(fragment)
+  fragment = li = null
+  ```
+
+  <p class="bad">Bad:</p>
+
+  ```js
+  var ul = $('ul')
+  for (var i = 0; i < 100; i++) {
+      ul.append('<li>...</li>')
+  }
+```
