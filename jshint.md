@@ -1,0 +1,32 @@
+---
+layout: default
+title: JSHint
+---
+
+## 安装
+
+首先通过 NPM 安装 JSHint：
+
+```sh
+$ npm install -g jshint
+```
+
+然后通过 [Sublime Text Package Manager](https://sublime.wbond.net/) 安装 [JSHint Gutter](https://sublime.wbond.net/packages/JSHint%20Gutter)。
+
+## 配置
+
+![](/images/jshint.png)
+
+### 第一步，Set Node Path
+
+在终端运行`which node`获取本机 NodeJS 可执行文件的路径。
+
+### 第二步，Set Linting Preferences
+
+用下面的代码替换默认的内容：
+
+{% gist 6228278 %}
+
+## 使用
+
+按快捷键`Command + Shift + j`调用。

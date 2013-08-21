@@ -4,7 +4,7 @@ date: 2013-08-09 10:45:35 +0800
 title: Javascript Styleguide
 ---
 
->  Push 至 Git 库前，必须先通过 [JSHint](http://jshint.com/install/) ([.jshintrc](https://gist.github.com/jsw0528/6228278)) 检查！
+>  Push 至 Git 库前，必须先通过 [JSHint](/jshint.html) 检查！
 
 ## 命名规范
 
@@ -81,6 +81,8 @@ title: Javascript Styleguide
       var userName = 'Steve Jobs'
       var userAge = 56
   ```
+
+  > 然后将上面的`user`写进「edr-assets」对应项目目录的`.jshintrc`中。
 
 - 使用 Array/Object 直接量，避免使用 Array/Object 构造器。
 
