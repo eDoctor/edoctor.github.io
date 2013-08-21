@@ -10,6 +10,20 @@
   </head>
 
   <body>
-    {{ content }}
+    <section class="container">
+      <header class="logo"></header>
+
+      <nav class="dashboard-tabs" id="j-nav">
+        <ul>
+          {% for post in site.posts reversed %}
+          <li><a href="/#{{ post.id }}">{{ post.title | split: ' ' | first }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+
+      {{ content }}
+
+      <footer class="copyright">&copy;2013 eDoctor</footer>
+    </section>
   </body>
 </html>
