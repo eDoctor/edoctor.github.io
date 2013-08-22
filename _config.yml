@@ -2,7 +2,7 @@
 #      Site Configs      #
 # ---------------------- #
 
-permalink: /styleguide/:title
+permalink: /:categories/:title
 
 
 # ---------------------- #

@@ -15,7 +15,7 @@
 
       <nav class="dashboard-tabs" id="j-nav">
         <ul>
-          {% for post in site.posts reversed %}
+          {% for post in site.categories.styleguide reversed %}
           <li><a href="/#{{ post.id }}">{{ post.title | split: ' ' | first }}</a></li>
           {% endfor %}
         </ul>

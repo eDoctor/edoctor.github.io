@@ -4,7 +4,7 @@ title: Styleguide
 ---
 
 <section class="styleguide">
-  {% for post in site.posts reversed %}
+  {% for post in site.categories.styleguide reversed %}
   <article>
     <h1>{{ post.title }}</h1>
     {{ post.content }}

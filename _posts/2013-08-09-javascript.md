@@ -2,9 +2,10 @@
 layout: default
 date: 2013-08-09 10:45:35 +0800
 title: Javascript Styleguide
+category: styleguide
 ---
 
->  Push 至 Git 库前，必须先通过 [JSHint](/jshint.html) 检查！
+>  Push 至 Git 库前，必须先通过 [JSHint]({% post_url 2013-08-22-jshint %}) 检查！
 
 ## 命名规范
 
