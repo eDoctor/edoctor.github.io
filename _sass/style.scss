@@ -18,7 +18,7 @@ $flash-colors: #468847 #dff0d8 darken(adjust-hue(#dff0d8, -10), 5%),
 @import 'base/reset';
 
 // Utility classes
-@import 'base/placeholders', 'base/utilities';
+@import 'base/placeholders', 'base/helpers';
 
 .container {
   min-width: 280px;
