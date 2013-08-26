@@ -1,6 +1,7 @@
 // Private variables
 $font-size-base: 16px;
 $line-height-base: 1.75;
+$line-height-half: $font-size-base * $line-height-base / 2;
 // Flash messages. (Order: text, background, border)
 $flash-states: success warning danger info !default;
 $flash-colors: #468847 #dff0d8 darken(adjust-hue(#dff0d8, -10), 5%),
@@ -109,7 +110,7 @@ $flash-colors: #468847 #dff0d8 darken(adjust-hue(#dff0d8, -10), 5%),
   ol, ul {
     margin: {
       left: 25px;
-      bottom: $font-size-base * $line-height-base / 2;
+      bottom: $line-height-half;
     }
 
     ol, ul {
@@ -149,7 +150,7 @@ h1 {
 }
 
 h2, h3, p, pre, blockquote {
-  margin-bottom: $font-size-base * $line-height-base / 2;
+  margin-bottom: $line-height-half;
 }
 
 p > img {
@@ -187,5 +188,36 @@ blockquote {
   }
 }
 
+.example {
+  padding: 0 $line-height-half;
+  border: 1px solid #ccc;
+  border-bottom: 0;
+  border-radius: 4px 4px 0 0;
+
+  &::before {
+    display: inline-block;
+    content: 'Example';
+    color: #bbb;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  p > .btn {
+    margin-top: 10px;
+  }
+
+  .tips {
+    margin-bottom: 0;
+  }
+
+  + .highlight > pre {
+    border-top: 0;
+    border-radius: 0 0 4px 4px;
+  }
+}
+
 @import 'base/codes', 'highlight';
 @import '../../../works/edr-assets/scss/_base2/ui-buttons';
+@import '../../../works/edr-assets/scss/_base2/ui-forms';
