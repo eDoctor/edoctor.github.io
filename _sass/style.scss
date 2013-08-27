@@ -1,19 +1,22 @@
+@charset 'UTF-8';
+
 // Private variables
 $font-size-base: 16px;
 $line-height-base: 1.75;
 $line-height-half: $font-size-base * $line-height-base / 2;
 
-// Core Variables and Mixins
+// Core Variables & Mixins
 @import 'base/variables', 'base/mixins';
 
-// Adjust browser support
+// Adjust Browser Support
 @include support($legacy-ie: false, $legacy-webkit: false, $legacy-moz: false);
 
 // Reset
 @import 'base/reset';
 
-// Utility classes
-@import 'base/placeholders', 'base/helpers';
+// Helper Classes & Placeholder Selectors
+@import 'base/helpers', 'base/placeholders';
+
 
 .container {
   min-width: 280px;
