@@ -1,5 +1,5 @@
-### Buttons
-
+{% case include.param %}
+{% when 'buttons' %}
 <div class="example clearfix">
   <p>
     <a href="#/styleguide/sass" class="btn">Link</a>
@@ -18,19 +18,7 @@
   </p>
 </div>
 
-```ruby
-= link_to 'Link', '#', class: 'btn'
-# <a href="#" class="btn">Link</a>
-
-= button_tag 'Default'
-# <button type="button" class="btn">Default</button>
-
-= button_tag 'Primary', class: 'btn btn-primary', disabled: true
-# <button type="button" class="btn btn-primary" disabled="disabled">Primary</button>
-```
-
-### Forms
-
+{% when 'forms' %}
 <div class="example clearfix">
   <div class="form-item">
     <label class="ctrl-label required" for="email">邮箱</label>
@@ -54,21 +42,7 @@
   </div>
 </div>
 
-```ruby
-.form-item
-  = label_tag :password, '密码', class: 'ctrl-label required'
-  = password_field_tag :password, placeholder: '请输入密码'
-  p.tips 密码长度应在 6 位以上，并使用数字、字母和符号的组合
-
-# <div class="form-item">
-#   <label class="ctrl-label required" for="password">密码</label>
-#   <input type="password" name="password" id="password" class="input" placeholder="请输入密码" />
-#   <p class="tips">密码长度应在 6 位以上，并使用数字、字母和符号的组合</p>
-# </div>
-```
-
-### Flash Messages
-
+{% when 'flashes' %}
 <div class="example clearfix">
   <div class="flash-message">
     <div class="flash-success">
@@ -95,17 +69,4 @@
     </div>
   </div>
 </div>
-
-```ruby
-.flash-message
-  .flash-success
-    p Well done!
-    p You successfully read this important flash message.
-
-# <div class="flash-message">
-#   <div class="flash-success">
-#     <p>Well done!</p>
-#     <p>You successfully read this important flash message.</p>
-#   </div>
-# </div>
-```
+{% endcase %}
