@@ -168,7 +168,8 @@ blockquote {
 }
 
 .example {
-  padding: 0 $line-height-half;
+  padding: $line-height-half;
+  padding-top: 0;
   border: 1px solid #ccc;
   border-bottom: 0;
   border-radius: 4px 4px 0 0;
@@ -191,8 +192,11 @@ blockquote {
     margin-bottom: 0;
   }
 
-  .flash-message:first-of-type {
-    margin-top: 10px;
+  .flash-message {
+    text-align: left;
+    > div {
+      margin: 10px 10px 0;
+    }
   }
 
   + .highlight > pre {
