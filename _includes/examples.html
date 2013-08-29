@@ -21,24 +21,24 @@
 {% when 'forms' %}
 <div class="example clearfix">
   <div class="form-item">
-    <label class="ctrl-label required" for="email">邮箱</label>
-    <input type="text" name="email" id="email" class="input" placeholder="请输入邮箱" />
-    <span class="error">邮箱必填</span>
+    <label class="heading-label required" for="email">邮箱</label>
+    <input class="input" id="email" name="email" placeholder="Email" type="text" />
   </div>
-
   <div class="form-item">
-    <label class="ctrl-label required" for="password">密码</label>
-    <input type="password" name="password" id="password" class="input" placeholder="请输入密码" />
+    <label class="heading-label required" for="password">密码</label>
+    <input class="input" id="password" name="password" placeholder="Password" type="password" />
     <p class="tips">密码长度应在 6 位以上，并使用数字、字母和符号的组合</p>
   </div>
-
   <div class="form-item">
-    <label class="ctrl-label" for="weibo">微博</label>
-    <textarea name="weibo" id="weibo" class="input" rows="3" placeholder="有什么新鲜事想告诉大家？"></textarea>
+    <label class="heading-label" for="weibo">微博</label>
+    <textarea class="input" id="weibo" name="weibo" placeholder="有什么新鲜事想告诉大家？" rows="3"></textarea>
   </div>
-
   <div class="form-item">
-    <button type="submit" class="btn">提交</button>
+    <input id="remember" name="remember" type="checkbox" value="1" />
+    <label class="linking-label" for="remember">15天内自动登录</label>
+  </div>
+  <div class="form-item">
+    <button class="btn" type="submit">提交</button>
   </div>
 </div>
 
@@ -46,26 +46,16 @@
 <div class="example clearfix">
   <div class="flash-message">
     <div class="flash-success">
-      <p>Well done!</p>
-      <p>You successfully read this important flash message.</p>
+      <p>成功！</p>
     </div>
-  </div>
-  <div class="flash-message">
     <div class="flash-warning">
-      <p>Warning!</p>
-      <p>Best check yo self, you're not looking too good.</p>
+      <p>警告！</p>
     </div>
-  </div>
-  <div class="flash-message">
     <div class="flash-danger">
-      <p>Oh snap!</p>
-      <p>Change a few things up and try submitting again.</p>
+      <p>危险！</p>
     </div>
-  </div>
-  <div class="flash-message">
     <div class="flash-info">
-      <p>Heads up!</p>
-      <p>This message needs your attention, but it's not super important.</p>
+      <p>提示！</p>
     </div>
   </div>
 </div>
