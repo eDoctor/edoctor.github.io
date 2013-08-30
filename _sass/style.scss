@@ -150,6 +150,10 @@ h2, h3, p, pre, blockquote {
   margin-bottom: $line-height-half;
 }
 
+h3 > code {
+  @extend %clean-code-styles;
+}
+
 p > img {
   width: 100%;
   max-width: 898px;
