@@ -20,7 +20,6 @@ category: styleguide
 ## 编码规范
 
 - 使用`UTF-8`作为文件编码格式。
-
 - 缩进使用 2 个空格，禁用 tab。
 
   [Sublime Text](http://mrzhang.me/blog/after-reinstall-the-system.html#sm) 可以设置：
@@ -33,9 +32,7 @@ category: styleguide
   ```
 
 - 尽量不要让每行超过 120 个字符，在不影响阅读的前提下，适当换行。
-
 - 利用（1~2个）空行分隔逻辑上相对独立的代码块，提高代码可读性与美感，同时照顾其他 review 你代码的同事的心情。
-
 - 行末、空行不要有空格。
 
   [Sublime Text](http://mrzhang.me/blog/after-reinstall-the-system.html#sm) 可以设置：
@@ -60,7 +57,6 @@ category: styleguide
   ```
 
 - 对于分号问题，也不做强行约定，但同一个文件里，风格必须一致。
-
 - 尽量减少全局变量的使用。
 
   如果需要从 HTML 页面传入多个变量，给它们指派合适的命名空间：
@@ -216,7 +212,6 @@ category: styleguide
   ```
 
 - 优先使用 jQuery 最快的 ID 选择器。
-
   > 可以配合给 HTML 标签加上`js-`前缀的 id，提高 DOM 操作效率。此类 id 只用于 js，不应该出现在 css 文件中。
 
   <p class="bad">Bad:</p>
