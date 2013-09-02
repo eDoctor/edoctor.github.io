@@ -197,6 +197,7 @@ blockquote {
   }
 
   .flash-message {
+    position: static;
     text-align: left;
     > div {
       margin: 10px 10px 0;
