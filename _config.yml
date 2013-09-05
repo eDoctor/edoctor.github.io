@@ -39,5 +39,4 @@ deploy:
 #    Social Networks     #
 # ---------------------- #
 
-# duoshuo:
-# google_analytics:
+google_analytics: UA-16622252-6
