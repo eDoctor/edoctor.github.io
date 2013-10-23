@@ -5,7 +5,7 @@ title: Javascript Styleguide
 category: styleguide
 ---
 
->  Push 至 Git 库前，必须先通过 [JSHint]({% post_url 2013-08-22-jshint %}) 检查！
+>  Push 至 Git 库前，必须先通过 [JSHint][] 检查！
 
 ## 命名规范
 
@@ -22,7 +22,7 @@ category: styleguide
 - 使用`UTF-8`作为文件编码格式。
 - 缩进使用 2 个空格，禁用 tab。
 
-  [Sublime Text](http://mrzhang.me/blog/after-reinstall-the-system.html#sm) 可以设置：
+  [Sublime Text][] 可以设置：
 
   ```js
   {
@@ -35,7 +35,7 @@ category: styleguide
 - 利用（1~2个）空行分隔逻辑上相对独立的代码块，提高代码可读性与美感，同时照顾其他 review 你代码的同事的心情。
 - 行末、空行不要有空格。
 
-  [Sublime Text](http://mrzhang.me/blog/after-reinstall-the-system.html#sm) 可以设置：
+  [Sublime Text][] 可以设置：
 
   ```js
   {
@@ -293,3 +293,7 @@ category: styleguide
   $('ul').html(fragment)
   fragment = li = null
   ```
+
+
+[Sublime Text]: http://mrzhang.me/blog/after-reinstall-the-system.html#sm
+[JSHint]: {% post_url 2013-08-22-jshint %}
